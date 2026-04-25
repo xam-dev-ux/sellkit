@@ -28,15 +28,14 @@ const config: HardhatUserConfig = {
   },
   // @ts-ignore — etherscan key is injected by @nomicfoundation/hardhat-verify (part of hardhat-toolbox)
   etherscan: {
-    apiKey: {
-      base: process.env.BASESCAN_API_KEY || '',
-    },
+    // Single string = Etherscan V2 unified API (works for all chains incl. Base with chainid param)
+    apiKey: process.env.BASESCAN_API_KEY || '',
     customChains: [
       {
         network: 'base',
         chainId: 8453,
         urls: {
-          apiURL: 'https://api.basescan.org/api',
+          apiURL: 'https://api.etherscan.io/v2/api?chainid=8453',
           browserURL: 'https://basescan.org',
         },
       },
