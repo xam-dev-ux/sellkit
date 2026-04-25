@@ -1,0 +1,13 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "packages/agent/Dockerfile"
+buildContext = "."
+
+[deploy]
+healthcheckPath = "/api/stats"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
+
+[[services]]
+name = "sellkit-agent"
