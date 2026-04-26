@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev --workspace=packages/agent\" \"npm run dev --workspace=packages/web\"",
     "build": "npm run build --workspace=packages/shared && npm run build --workspace=packages/contracts && npm run build --workspace=packages/agent && npm run build --workspace=packages/web",
+    "build:vercel": "npm run build --workspace=packages/shared && npm run build --workspace=packages/web",
     "test": "npm run test --workspace=packages/contracts",
     "typecheck": "tsc -b packages/shared packages/agent packages/web"
   },

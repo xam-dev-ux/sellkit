@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build --workspace=packages/shared && npm run build --workspace=packages/web",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": "packages/web/dist",
-  "framework": "vite",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
