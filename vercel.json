@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:vercel",
+  "buildCommand": "npm run build --workspace=@sellkit/shared && npm run build --workspace=@sellkit/web",
   "outputDirectory": "packages/web/dist",
   "framework": "vite",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
